@@ -1,0 +1,148 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="NOIR — where precision meets opulence. A digital atelier for the discerning." />
+  <meta name="theme-color" content="#0a0a0a" />
+  <title>NOIR — Digital Atelier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+  <header class="masthead" role="banner">
+    <nav class="nav" aria-label="Primary">
+      <div class="brand" aria-label="NOIR">
+        <span class="brand-mark">◆</span>
+        <span class="brand-wordmark">NOIR</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#atelier">Atelier</a></li>
+        <li><a href="#validator">Vault</a></li>
+        <li><a href="#manifesto">Manifesto</a></li>
+        <li><a href="#contact" class="cta-link">Commission</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <section class="hero" id="atelier">
+      <p class="eyebrow">Est. MMXXVI — Geneva · Tokyo · New York</p>
+      <h1 class="hero-title">
+        <span class="line">Precision,</span>
+        <span class="line italic">rendered</span>
+        <span class="line">in obsidian.</span>
+      </h1>
+      <p class="lede">
+        A digital atelier crafting instruments of rare exactitude for institutions
+        who refuse to compromise on the invisible.
+      </p>
+      <div class="hero-actions">
+        <a href="#validator" class="btn btn-primary">Enter the Vault</a>
+        <a href="#manifesto" class="btn btn-ghost">Read the Manifesto</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="vault" id="validator" aria-labelledby="vault-title">
+      <div class="vault-inner">
+        <header class="vault-header">
+          <p class="eyebrow">Chapter I — The Instrument</p>
+          <h2 id="vault-title">The IBAN Validator</h2>
+          <p class="vault-lede">
+            An instrument of verification, rendered with the same care as a Swiss movement.
+            Every character weighed. Every checksum honored.
+          </p>
+        </header>
+
+        <form class="validator" id="validator-form" novalidate>
+          <label for="iban-input" class="sr-only">International Bank Account Number</label>
+          <div class="input-shell">
+            <input type="text" id="iban-input" name="iban" autocomplete="off" spellcheck="false" placeholder="GB82 WEST 1234 5698 7654 32" aria-describedby="validator-feedback" maxlength="42" />
+            <div class="input-glow" aria-hidden="true"></div>
+          </div>
+          <div class="validator-meta">
+            <div class="validator-feedback" id="validator-feedback" role="status" aria-live="polite"></div>
+            <div class="validator-stats">
+              <span class="stat"><span class="stat-label">Length</span><span class="stat-value" id="stat-length">0</span></span>
+              <span class="stat"><span class="stat-label">Country</span><span class="stat-value" id="stat-country">—</span></span>
+              <span class="stat"><span class="stat-label">Checksum</span><span class="stat-value" id="stat-checksum">—</span></span>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">Authenticate</button>
+        </form>
+
+        <div class="examples" role="region" aria-label="Example IBANs">
+          <p class="examples-label">Specimens for trial</p>
+          <div class="example-chips">
+            <button class="chip" data-iban="GB82 WEST 1234 5698 7654 32">GB · Westminster</button>
+            <button class="chip" data-iban="SA03 8000 0000 6080 1016 7519">SA · Riyad Bank</button>
+            <button class="chip" data-iban="DE89 3704 0044 0532 0130 00">DE · Commerzbank</button>
+            <button class="chip" data-iban="FR76 3000 6000 0112 3456 7890 189">FR · BNP Paribas</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="manifesto" id="manifesto" aria-labelledby="manifesto-title">
+      <div class="manifesto-inner">
+        <p class="eyebrow">Chapter II — The Creed</p>
+        <h2 id="manifesto-title">A Manifesto in Seven Tenets</h2>
+        <ol class="tenets">
+          <li><span class="tenet-num">I.</span>
+            <p>We believe silence is the highest form of luxury.</p>
+          </li>
+          <li><span class="tenet-num">II.</span>
+            <p>Every pixel is a decision. Every decision, a signature.</p>
+          </li>
+          <li><span class="tenet-num">III.</span>
+            <p>Speed is courtesy. Latency is disrespect.</p>
+          </li>
+          <li><span class="tenet-num">IV.</span>
+            <p>We do not ship features. We ship instruments.</p>
+          </li>
+          <li><span class="tenet-num">V.</span>
+            <p>Accessibility is not a feature — it is the floor.</p>
+          </li>
+          <li><span class="tenet-num">VI.</span>
+            <p>The code is the craft. The craft is the product.</p>
+          </li>
+          <li><span class="tenet-num">VII.</span>
+            <p>We build for the next decade, not the next quarter.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <div class="contact-inner">
+        <p class="eyebrow">Chapter III — The Commission</p>
+        <h2 id="contact-title">Begin a Conversation</h2>
+        <p class="contact-lede">
+          We accept a limited number of commissions each season.
+          Correspondence is answered within forty-eight hours.
+        </p>
+        <a href="mailto:atelier@noir.example" class="btn btn-primary">atelier@noir.example</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <p class="footer-mark">◆ NOIR</p>
+      <p class="footer-line">Crafted with exactitude · MMXXVI</p>
+      <p class="footer-legal">IBAN validation conforms to ISO 13616-1:2020.</p>
+    </div>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+
+</html>
